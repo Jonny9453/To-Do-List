@@ -13,13 +13,8 @@ let items=[];
 const workItems=[];
 
 app.get("/", function(req, res){
-
-
     let day= date()
-
-
     res.render('List', {kindOfThings:day , postItems:items});
-   
 });
 
 app.post("/",function(req, res){
@@ -31,8 +26,6 @@ app.post("/",function(req, res){
     items.push(item);
     res.redirect("/");
   }
-  
-  
 })
 
 app.get("/work", function(req,res){
